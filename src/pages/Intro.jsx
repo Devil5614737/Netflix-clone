@@ -85,9 +85,7 @@ function Intro() {
       </main>
  
 
-      <footer className="footer">
-        <Footer />
-      </footer>
+  
     </>
   );
 }
