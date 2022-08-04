@@ -1,0 +1,325 @@
+.nav {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  background-color: #141414;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav .container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.7em 5.3em;
+}
+
+.nav .container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .container .left .logo {
+  margin-right: 52px;
+}
+
+.nav .container .left .logo img {
+  width: 90px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.nav .container .left .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .container .left .links ul li {
+  margin-right: 22px;
+}
+
+.nav .container .left .links ul li a {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .nav .container .left .links {
+    display: none;
+  }
+}
+
+.nav .container .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .container .right input {
+  height: 35px;
+  border-radius: 2px;
+  color: black;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-right: 20px;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: white;
+  background-color: #1e1d1d;
+  border: none;
+}
+
+.nav .container .right input.active {
+  opacity: 1;
+  width: 230px;
+}
+
+.nav .container .right img {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+}
+
+#logoutBox {
+  position: absolute;
+  right: 50px;
+  color: white;
+  border: 1px solid white;
+  padding: 0.7em 1em;
+}
+
+#logoutBox a {
+  display: block;
+  font-size: 1.7em;
+  margin-bottom: 8px;
+}
+
+#logoutBox a:hover {
+  text-decoration: underline;
+}
+
+.nav.active {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -moz- oldlinear-gradient(13deg, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 85%);
+  background: linear-gradient(77deg, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 85%);
+  z-index: 1;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero .heroContent {
+  padding: 2em 5.3em;
+  margin-top: 105px;
+}
+
+.hero .heroContent h3 {
+  margin-bottom: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+@media screen and (max-width: 800px) {
+  .hero .heroContent h3 {
+    font-size: 2em;
+  }
+}
+
+.hero .heroContent p {
+  color: white;
+  font-size: 1.8em;
+  max-width: 45%;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+  .hero .heroContent p {
+    max-width: 100%;
+    font-size: 1.4em;
+  }
+}
+
+.hero .heroContent .heroButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.hero .heroContent .heroButtons button {
+  background-color: white;
+  border: none;
+  font-size: 1.6em;
+  padding: 0.5em 1em;
+  margin-right: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .heroContent .heroButtons button:nth-of-type(2) {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .hero .heroContent .heroButtons button {
+    font-size: 1.2em;
+  }
+}
+
+.mainContent {
+  padding: 1.7em 5.3em;
+}
+
+.mainContent .rowsContainer {
+  color: white;
+}
+
+.mainContent .rowsContainer .row {
+  margin-bottom: 32px;
+}
+
+.mainContent .rowsContainer .row .title {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 16px;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+}
+
+@media screen and (max-width: 942px) {
+  .mainContent .rowsContainer .row .movies .movieCard {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .mainContent .rowsContainer .row .movies .movieCard {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainContent .rowsContainer .row .movies .movieCard {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 32;
+  border-radius: 3px;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card:hover .icons {
+  opacity: 1;
+  bottom: 16px;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card .icons {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card .icons .icon {
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 12px;
+  padding: 0.6em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.mainContent .rowsContainer .row .movies .movieCard .card .icons .icon:nth-of-type(1) {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=home.css.map */

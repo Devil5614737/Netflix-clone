@@ -1,0 +1,80 @@
+#header #nav {
+  padding: 2em;
+}
+
+#header #nav img {
+  width: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 40px;
+}
+
+#main {
+  background: unset;
+  padding: 2em;
+}
+
+#main #wrapper p {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+#main #wrapper #avatarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+}
+
+#main #wrapper #avatarContainer .avatar {
+  margin-right: 42px;
+  margin-bottom: 12px;
+}
+
+#main #wrapper #avatarContainer .avatar img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#main #wrapper #avatarContainer .avatar img:hover {
+  border: 2px solid white;
+}
+
+#main #wrapper #avatarContainer .avatar p {
+  font-size: 1.7em;
+  margin-top: 5px;
+  cursor: pointer;
+  color: grey;
+}
+
+#main #wrapper button {
+  background-color: black;
+  color: grey;
+  font-size: 1.7em;
+  padding: .5em 1em;
+  cursor: pointer;
+  border: 1px solid grey;
+  display: block;
+  margin: 22px auto;
+}
+
+#main #wrapper button:hover {
+  border: 1px solid white;
+  color: white;
+}
+/*# sourceMappingURL=whoiswatching.css.map */

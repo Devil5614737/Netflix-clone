@@ -1,0 +1,176 @@
+.introHeader{
+    height: 100vh;
+    width: 100vw;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/c2578c37-8569-4f88-b8f1-67a26a9ddcdd/4f46d201-48d4-40a7-9bfb-8e260d680912/IN-en-20220725-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        z-index: 32;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.4);
+        background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+        z-index: -1;
+    }
+    .headerNav{
+        .headerWrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.3em 3em;
+            .logo{
+                width: 100px;
+                object-fit: contain;
+                cursor: pointer;
+               
+            }
+            .buttonContainer{
+                button{
+                    margin-left: 12px;
+                    font-size: 1.6em;
+                    padding: .6em 1em;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    color: white;
+                    border: none;
+                    background-color: rgba(0,0,0,.7);
+                    &:nth-of-type(2){
+                        background-color: #E50914;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .titles{
+        color: white;
+        display: grid;
+        place-items: center;
+        line-height: 2.1;
+        margin-top: 74px;
+        .title{
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .subtitle{
+            font-size: 2.2em;
+            font-weight: 500;
+        }
+        .bottomTitle{
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+}
+
+#introMain{
+    background: unset;
+    .box{
+        &:nth-of-type(2),&:nth-of-type(3){
+            .textContainer{
+                h3{
+                    line-height: 1.4;
+                }
+            }
+          
+        }
+      
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            place-content: center;
+            align-items: center;
+            padding: 3em 1em;
+            max-width: 1100px;
+            margin: auto;
+            grid-row-gap: 32px;
+            @media screen and (max-width:950px) {
+                padding: 3em 4em;
+            }
+            @media screen and (max-width:760px) {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .textContainer{
+                color: white;
+                line-height: 1.8;
+                h3{
+                    font-size: 3.8em;
+                    font-weight: bold;
+                    @media screen and (max-width:950px) {
+                font-size: 3em;
+                    }
+                }
+                p{
+                    line-height: 1.6;
+                    font-size: 1.8em;
+                    max-width: 90%;
+                    @media screen and (max-width:950px) {
+                        font-size:1.5em;
+                            }
+                }
+            }
+            .thumbnail{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .faqSection{
+        margin-top: 42px;
+        color: white;
+        .faqTitle{
+           text-align: center;
+           font-weight: bold;
+           font-size: 2.2em;
+           margin-bottom: 22px;
+        }
+        .faqContainer{
+            display: grid;
+            place-items: center;
+              padding: 0 1em;
+            .bar{
+                background-color: #303030;
+                width: 600px;
+                padding: 1.6em;
+           margin-bottom:8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media screen and (max-width:650px) {
+                    width: 100%;
+                }
+                p{
+                    font-size: 1.9em;
+                    font-weight: bold;
+                }
+            }
+           
+            .detail{
+                margin-bottom: 16px;
+                background-color: #303030;
+                width: 600px;
+                padding: 1.6em;
+                font-size: 1.5em;
+                line-height: 1.6;
+                display: none;
+                @media screen and (max-width:650px) {
+                    width: 100%;
+                }
+            }
+            .detail.active{
+            display: block;
+            }
+           
+        }
+    }
+}
+

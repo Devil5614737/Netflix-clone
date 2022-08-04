@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "title": "Enjoy on your TV.",
+      "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
+      "image": "https://netflix-clone-next-js-ten.vercel.app/_next/image?url=%2Fhome-tv.jpg&w=640&q=75",
+      "alt": "Tiger King on Netflix",
+      "direction": "row"
+    },
+    {
+      "id": 2,
+      "title": "Download your programmes to watch on the go.",
+      "subTitle": "Save your data and watch all your favourites offline.",
+      "image": "https://netflix-clone-next-js-ten.vercel.app/_next/image?url=https%3A%2F%2Fassets.nflxext.com%2Fffe%2Fsiteui%2Facquisition%2FourStory%2Ffuji%2Fdesktop%2Fmobile-0819.jpg&w=640&q=75",
+      "alt": "Tiger King on Netflix",
+      "direction": "row-reverse"
+    },
+    {
+      "id": 3,
+      "title": "Watch everywhere.",
+      "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
+      "image": "https://netflix-clone-next-js-ten.vercel.app/_next/image?url=%2Fhome-imac.jpg&w=640&q=75",
+      "alt": "Money Heist on Netflix",
+      "direction": "row"
+    },
+    {
+      "id": 4,
+      "title": "Create profiles for children.",
+      "subTitle": "Send children on adventures with their favourite characters in a space made just for them—free with your membership.",
+      "image": "https://netflix-clone-next-js-ten.vercel.app/_next/image?url=%2Fimage.png&w=640&q=75",
+      "alt": "Money Heist on Netflix",
+      "direction": "row"
+    }
+  ]
