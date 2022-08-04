@@ -7,6 +7,8 @@ import Jumbo from '../data/jumbo.json'
 import { Faq } from '../components/Faq';
 import FAQ  from '../data/faq.json';
 import { useNavigate } from 'react-router-dom';
+import { GetStartedBox } from '../components/GetStartedBox';
+import {Footer} from '../components/Footer';
 
 function Intro() {
 const navigate=useNavigate()
@@ -45,12 +47,18 @@ if(itemIndex===deIndex){
     <p className="subtitle">Watch anywhere. Cancel anytime.</p>
     <p className="bottomTitle">Ready to watch? Enter your email to create or restart your membership.</p>
 </div>
+  <GetStartedBox/>
 
     </header>
+    <hr  id='hr'/>
     <main id='introMain'>
-      {Jumbo.map(item=><Box id={item.id} title={item.title} desc={item.subTitle} image={item.image} />)}
+      {Jumbo.map(item=><Box id={item.id} title={item.title} desc={item.subTitle} image={item.image}
+      
+      />
+      
+      )}
    
-   <hr />
+   <hr  id='hr'/>
    <div className="faqSection">
     <h4 className="faqTitle">
       Frequently Asked Questions
@@ -62,7 +70,16 @@ if(itemIndex===deIndex){
 
     </div>
    </div>
+   <div className="boxContainer">
+<p>Ready to watch? Enter your email to create or restart your membership.</p>
+   <GetStartedBox/>
+   </div>
     </main>
+    <hr  id='hr'/>
+ 
+    <footer className="footer">
+      <Footer/>
+    </footer>
     </>
   )
 }

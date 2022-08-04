@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import {Login as Lgn, Signup} from '../redux/actions/actions';
 import Logo from '../assets3/logo.svg';
 import '../styles/login.css';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import {  onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase/config';
 
 
@@ -42,7 +42,9 @@ const handleSignup=()=>{
   return (
   <main>
     <nav>
+      <Link to='/'>
       <img src={Logo} alt="logo" />
+      </Link>
     </nav>
     {!signup?<div className="card">
       <p className="title">Sign In</p>

@@ -7,7 +7,8 @@ import { MovieRow } from '../components/MovieRow';
 import { useSelector,useDispatch } from 'react-redux';
 import {fetchActionMovie, fetchComedyMovie, fetchDocumentaryMovie, fetchHorrorMovie, fetchMovie, fetchRomanticMovie, fetchTopRatedMovie} from '../redux/actions/actions';
 import { MovieDetailModal } from '../components/MovieDetailModal';
-import Bg from '../data/heroBg.json'
+import Bg from '../data/heroBg.json';
+import {Footer} from '../components/Footer'
 
 function Home() {
   const dispatch=useDispatch();
@@ -87,7 +88,10 @@ const hero={
  
     </div>
    </div>
-   
+   <hr id='hr' />
+   <footer className="footer">
+    <Footer/>
+   </footer>
     </>
   )
 }
