@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import {Login as Lgn, Signup} from '../redux/actions/actions';
 import Logo from '../assets3/logo.svg';
 import '../styles/login.css';
 import {  onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase/config';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 
 
@@ -16,7 +18,8 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
+const loginState=useSelector(state=>state.loginTheUser)
+const {loading}=loginState
 
 
 const handleLogin=()=>{
@@ -51,7 +54,9 @@ const handleSignup=()=>{
       <div className="form">
         <input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder='Email or phone number' />
         <input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder='Password' />
-      <button onClick={handleLogin}>Sign In</button>
+      <button onClick={handleLogin}>{
+      loading? <ClipLoader color='white'  size={20} />:
+     ' Sign In'}</button>
       </div>
       <p className="signup">New to Netflix? <span onClick={()=>setSignup(true)}>Sign up now</span></p>
     </div>:<div className="card">
@@ -59,7 +64,9 @@ const handleSignup=()=>{
       <div className="form">
         <input onChange={(e)=>setEmail(e.target.value)} value={email} type="email" placeholder='Email or phone number' />
         <input onChange={(e)=>setPassword(e.target.value)} value={password} type="password" placeholder='Password' />
-      <button onClick={handleSignup}>Sign Up</button>
+      <button onClick={handleSignup}>{
+      loading? <ClipLoader color='white'  size={20} />:
+     ' Sign Up'}</button>
       </div>
     
     </div>}

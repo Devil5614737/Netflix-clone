@@ -8,7 +8,6 @@ import { Faq } from "../components/Faq";
 import FAQ from "../data/faq.json";
 import { useNavigate } from "react-router-dom";
 import { GetStartedBox } from "../components/GetStartedBox";
-import { Footer } from "../components/Footer";
 
 function Intro() {
   const navigate = useNavigate();
@@ -83,9 +82,6 @@ function Intro() {
           <GetStartedBox />
         </div>
       </main>
- 
-
-  
     </>
   );
 }

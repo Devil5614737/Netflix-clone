@@ -9,6 +9,7 @@ export const Profile = ({ setShowProfile, uid }) => {
   const handleSubmit = async () => {
     try {
       const docRef = await addDoc(collection(db, "profiles"), {
+       
         uid: uid,
         username: text,
         img: "https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABRmtNzyg7zV6EC3TQGMQqbhKrAGB42lxYLSPWRqTJ_yxIx8W7rL-Abhyr7Goh0TCHU6f2b66nJAZ3sKpsYqw0HIr61mR.png?r=125",

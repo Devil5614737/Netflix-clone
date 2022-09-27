@@ -56,7 +56,7 @@ export const Login = (email, password) => (dispatch) => {
             const user = userCredential.user;
             if(user){
                 localStorage.setItem('currentUser',JSON.stringify(user))
-                
+                alert('user created')
             }
             dispatch({
                 type: LOGIN_SUCCESS,
@@ -65,7 +65,8 @@ export const Login = (email, password) => (dispatch) => {
         })
         .catch((error) => {
             const errorMessage = error.message;
-            alert(errorMessage)
+            error&&alert(errorMessage)
+            
             dispatch({
                 type: LOGIN_FAILED,
                 payload: errorMessage
@@ -87,6 +88,10 @@ export const Signup = (email, password) => (dispatch) => {
         .then((userCredential) => {
 
             const user = userCredential.user;
+                if(user){
+                localStorage.setItem('currentUser',JSON.stringify(user))
+                
+            }
             dispatch({
                 type: SIGNUP_SUCCESS,
                 payload: user

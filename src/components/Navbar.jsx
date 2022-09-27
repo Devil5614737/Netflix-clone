@@ -76,8 +76,11 @@ window.addEventListener('scroll',()=>{
 }
 
 const handleLogout=()=>{
-    navigate('/login')
-   signOut(auth)
+    signOut(auth).then(() => {
+        navigate('/login')
+      }).catch((error) => {
+        alert(error)
+      });
 }
 
 

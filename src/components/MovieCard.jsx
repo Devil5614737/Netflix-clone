@@ -2,6 +2,7 @@ import { BsFillPlayFill, BsPlusLg } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { movieDetail } from "../redux/actions/actions";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const imageLink = "https://image.tmdb.org/t/p/original";
 
@@ -14,7 +15,9 @@ export const MovieCard = ({ icons, img, setShowModal, data }) => {
 
   return (
     <div className="card">
-      <img loading="lazy" src={imageLink + img} alt="movie thumbnail" />
+      <LazyLoadImage 
+      effect="blur"
+      loading="lazy" src={imageLink + img} alt="movie thumbnail" />
       {icons === "true" && (
         <div className="icons">
           <div className="icon">
